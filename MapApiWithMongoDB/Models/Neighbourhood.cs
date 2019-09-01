@@ -10,17 +10,17 @@ namespace MapApiWithMongoDB.Models
     public class Neighbourhood
     {
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
-        public int MahId { get; set; }
-        public int IlceId{ get; set; }
-        public string MahAdi { get; set; }
-        public double Longitude { get; set; }
-        public double Latitude { get; set; }
-        public int PostCode { get; set; }
-        public int Nufus { get; set; }
-        public int Vrs { get; set; }
-        public int UavtKodu { get; set; }
-        public Geo Geo { get; set; }
+        public string _id { get; set; }
+        public int MAH_ID { get; set; }
+        public int ILCE_ID { get; set; }
+        public string ADI { get; set; }
+        public double LONGX { get; set; }
+        public double LATY { get; set; }
+        public int POSTAKODU { get; set; }
+        public int NUFUS { get; set; }
+        public int VRS { get; set; }
+        public int UAVTKODU { get; set; }
+        public BsonDocument GEO { get; set; }
 
     }
 }

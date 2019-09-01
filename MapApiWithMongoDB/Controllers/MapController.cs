@@ -14,20 +14,28 @@ namespace MapApiWithMongoDB.Controllers
     public class MapController : ApiController
     {
         [HttpGet]
-        public List<BsonDocument> GetPoiList(double longitude, double latitude, double distance)
+        public async Task<List<Poi>> GetPoiList(double longitude, double latitude, double distance)
         {
-            return MapActions.GetPOIList(longitude, latitude, distance);
+            return await MapActions.GetPOIList(longitude, latitude, distance);
         }
 
         [HttpGet]
-        public async Task<List<BsonDocument>> GetPoiListWithCat(double longitude, double latitude, double distance, string cat)
+        public async Task<List<Poi>> GetPoiListWithCat(double longitude, double latitude, double distance, string cat)
         {
             return await MapActions.GetPOIListWithCat(longitude, latitude, distance, cat);
         }
 
-        public async Task<BsonDocument> GetNeighbourHood(double longitude, double latitude)
+        [HttpGet]
+        public async Task<Neighbourhood> GetNeighbourHood(double longitude, double latitude)
         {
             return await MapActions.GetNeighbourhoodWithLoc(longitude, latitude);
+        }
+
+
+        [HttpGet]
+        public async Task<List<Poi>> GetPoiListWithNeighbourhood(int? hoodId, string hoodName = "")
+        {
+            return await MapActions.GetPoiListWithNeighbourhood(hoodId,hoodName);
         }
     }
 }

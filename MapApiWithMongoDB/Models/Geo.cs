@@ -7,7 +7,7 @@ namespace MapApiWithMongoDB.Models
 {
     public class Geo
     {
-        public string GeoType { get; set; }
-        public List<double> Coordinates { get; set; }
+        public string type { get; set; }
+        public List<double> coordinates { get; set; }
     }
 }

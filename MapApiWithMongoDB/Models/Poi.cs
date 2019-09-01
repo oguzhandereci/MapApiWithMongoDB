@@ -11,20 +11,20 @@ namespace MapApiWithMongoDB.Models
     public class Poi
     {
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
-        public string Adi { get; set; }
-        public string Kategori { get; set; }
-        public string UstKategori { get; set; }
-        public int Il_Id { get; set; }
-        public int Ilce_Id { get; set; }
-        public int Mah_Id { get; set; }
-        public int Basar_Id { get; set; }
-        public int Ilcs_Id { get; set; }
-        public int YolId { get; set; }
-        public string YolAdi { get; set; }
-        public int Vrs { get; set; }
+        public string _id { get; set; }
+        public string ADI { get; set; }
+        public string KATEGORI { get; set; }
+        public string USTKATEGORI { get; set; }
+        public int IL_ID { get; set; }
+        public int ILCE_ID { get; set; }
+        public int MAH_ID { get; set; }
+        public int BASAR_ID { get; set; }
+        public int ILCS_ID { get; set; }
+        public int YOLID { get; set; }
+        public string YOLADI { get; set; }
+        public int VRS { get; set; }
 
-        public Geo Geo { get; set; }
+        public Geo GEO { get; set; }
 
 
     }
